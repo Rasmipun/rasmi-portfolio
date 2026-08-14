@@ -5,9 +5,9 @@ const HeaderSection = () => {
     <header
       className="
         z-50
-        fixed bottom-4 left-0 right-0
+        fixed bottom-0 left-0 right-0
         flex justify-center backdrop-blur-2xl
-              bg-white/15
+              bg-white/15 
         md:relative md:bottom-auto
       "
     >
