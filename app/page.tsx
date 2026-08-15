@@ -9,7 +9,7 @@ import { ContactSection } from "@/sections/Contact";
 
 export default function Home() {
   return (
-<div>
+  <div>
   <HeaderSection />
   <HeroSection />
   <TapeSection />
