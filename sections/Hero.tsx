@@ -1,28 +1,89 @@
+
 import Image from "next/image";
-import AutoTypeTitle from './../Components/ui/AutoTypeTitle';
+import AutoTypeTitle from "./../Components/ui/AutoTypeTitle";
 
 const HeroSection = () => {
-    return (
+  return (
+    <section
+      className="
+        flex
+        min-h-screen
+        flex-col
+        items-center
+        justify-center
+        gap-8
+        px-6
+        py-20
 
-            <section className=" flex justify-between px-70 mt-30 h-100 gap-50 bg-amber-900 ">
-               <div className=" bg-amber-300 w-full text-black text-2xl">
-                   <h1 className="font-semibold">HY! Myself Rasmi pun.</h1>
-                   I am a  <AutoTypeTitle />
-               </div>
-               
-                <div className="w-full h-full bg-black">
-                <Image
-                    src="/Image/rasmi.png"
-                    alt="Profile of rasmi"
-                    width={300}
-                    height={300}
-                    className=""
-                    loading="eager" //Load this image immediately instead of waiting.
-                    />
-                </div>
+        md:flex-row
+        md:gap-10
+        md:px-12
+        md:py-20
 
-            </section>
-    )
-}
+        lg:gap-20
+        lg:px-100
+      "
+    >
+      {/* Image */}
+      <div
+        className="
+          order-1
+          flex
+          w-full
+          justify-center
 
-export {HeroSection};
+          md:order-2
+          md:w-1/2
+          md:justify-end
+          
+        "
+      >
+        <Image
+          src="/Image/rasmi.png"
+          alt="Profile of Rasmi"
+          width={300}
+          height={300}
+          className="
+            h-auto
+            w-48
+            sm:w-56
+            md:w-64
+            lg:w-72
+            bg-amber-200
+          "
+          priority
+        />
+      </div>
+
+      {/* Content */}
+      <div
+        className="
+          order-2
+          flex
+          w-full
+          flex-col
+          gap-2
+          text-center
+          text-xl
+          text-white
+
+          md:order-1
+          md:w-1/2
+          md:text-left
+          md:text-2xl
+        "
+      >
+        <h1 className="font-semibold">
+          HY! Myself Rasmi Pun.
+        </h1>
+
+        <div>
+          I am a <AutoTypeTitle />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export { HeroSection };
+

@@ -68,7 +68,7 @@ const AutoTypeTitle = () => {
       ]}
       wrapper="span"
       speed={50}
-      style={{ fontSize: '30px', display: 'inline-block', fontFamily: "var(--font-geist-sans)", }}
+      style={{ fontSize: '30px', display: 'inline-block', fontFamily: "var(--font-geist-sans)", color: "pink"}}
       repeat={Infinity}
     />
   );
