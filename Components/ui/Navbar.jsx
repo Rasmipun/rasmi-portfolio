@@ -9,7 +9,13 @@ const navItems = [
 
 const Navbar = () => {
   return (
-    <nav
+    <div className="z-50
+        fixed bottom-0 left-0 right-0
+        flex justify-center backdrop-blur-2xl
+      bg-white/15 
+        md:bottom-auto
+        md:fixed ">
+          <nav
       className="
         fixed
         bottom-4
@@ -57,7 +63,7 @@ const Navbar = () => {
               text-white/70
               transition-colors
               duration-600
-              hover:text-white
+              hover:text-primary
 
               after:absolute
               after:left-4
@@ -96,6 +102,9 @@ const Navbar = () => {
         );
       })}
     </nav>
+
+    </div>
+    
   );
 };
 

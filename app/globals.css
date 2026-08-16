@@ -6,6 +6,28 @@
   --breakpoint-lg: 1200px;
 
   --color-primary: #39FF14;
-  --color-secondary: 
+  --color-secondary: ;
  
 }
+
+body {
+  @apply leading-relaxed;
+}
+
+.Title {
+  @apply text-[40px] md:text-[52px] xl:text-[56px] leading-none tracking-tight font-extrabold;
+}
+
+.Heading {
+    @apply text-[32px] md:text-[36px] xl:text-[20px] leading-normal tracking-tight ;
+}
+
+.subHeading {
+   @apply text-[28px] md:text-[30px] xl:text-[32px] leading-[1.2] tracking-tight ;
+}
+
+.Container {
+  @apply px-3.75;
+}
+
+
