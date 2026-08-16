@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import  Navbar from '@/Components/ui/Navbar';
+import Navbar from "@/Components/ui/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,10 +11,8 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  weight: ["400"]
+  weight: ["400"],
 });
-
-
 
 export const metadata: Metadata = {
   title: "Rasmi Portfolio",
@@ -24,21 +22,23 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable}  antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body 
-        className="min-h-full bg-black text-white font-sans">
-          <div 
+      <body className="min-h-screen bg-black text-white font-sans">
         
-        >
-      <Navbar />
-    </div> 
-        {children}
-        </body>
+        <Navbar />
+
+        <main className="pt-0 md:pt-[76px]">
+          {children}
+        </main>
+
+      </body>
     </html>
   );
 }

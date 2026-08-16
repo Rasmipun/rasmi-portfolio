@@ -9,20 +9,15 @@ const navItems = [
 
 const Navbar = () => {
   return (
-    <div className="z-50
-        fixed bottom-0 left-0 right-0
-        flex justify-center backdrop-blur-2xl
-      bg-white/15 
-        md:bottom-auto
-        md:fixed ">
-          <nav
+    <nav
       className="
         fixed
+        z-50
+
+        /* Mobile */
         bottom-4
         left-1/2
-        z-50
         -translate-x-1/2
-
         flex
         gap-3
         rounded-full
@@ -33,16 +28,21 @@ const Navbar = () => {
         backdrop-blur-xl
         shadow-lg
 
-        md:static
+        /* Desktop */
+        md:top-0
+        md:right-0
+        md:bottom-auto
+        md:left-0
         md:translate-x-0
         md:flex
+        md:justify-center
         md:gap-5
         md:rounded-none
         md:border-0
-        md:bg-transparent
+        md:bg-white/10
         md:p-5
-        md:backdrop-blur-none
-        md:shadow-none
+        md:backdrop-blur-xl
+        md:shadow-lg
       "
     >
       {navItems.map((item) => {
@@ -62,7 +62,7 @@ const Navbar = () => {
               font-semibold
               text-white/70
               transition-colors
-              duration-600
+              duration-300
               hover:text-primary
 
               after:absolute
@@ -73,11 +73,8 @@ const Navbar = () => {
               after:bg-primary
               after:shadow-[0_0_8px_#39FF14]
               after:transition-all
-              after:duration-600
+              after:duration-300
               hover:after:w-[calc(100%-2rem)]
-
-              md:px-4
-              md:py-1.5
             "
           >
             {/* Mobile icon */}
@@ -87,8 +84,7 @@ const Navbar = () => {
                 block
                 text-white/70
                 transition-colors
-                
-                hover:duration-500
+                duration-300
                 group-hover:text-primary
                 md:hidden
               "
@@ -102,9 +98,6 @@ const Navbar = () => {
         );
       })}
     </nav>
-
-    </div>
-    
   );
 };
 
