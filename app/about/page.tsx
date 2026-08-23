@@ -1,7 +1,7 @@
-const about = () => {
+const About = () => {
     return (
-        <div className="flex justify-center bg-amber-700">About</div>
+        <section id="about" className="flex justify-center min-h-screen  bg-amber-300">About</section>
     )
 }
 
-export default about;
+export default About;

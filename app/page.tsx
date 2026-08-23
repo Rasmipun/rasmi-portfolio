@@ -25,7 +25,7 @@
 
 const Home = () => {
   return (
-    <div>homepage</div>
+    <section id="home" className="flex justify-center pt-20 min-h-screen bg-pink-400">jfie</section>
   )
 }
 

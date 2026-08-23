@@ -1,6 +1,6 @@
 const contact = () => {
     return (
-        <div>contact</div>
+        <section id="contact" className="flex justify-center min-h-screen scroll-pt-20 bg-amber-900">contact</section>
     )
 }
 

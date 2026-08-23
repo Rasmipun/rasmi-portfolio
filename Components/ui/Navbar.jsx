@@ -18,7 +18,8 @@ const Navbar = () => {
     <nav
       className="
         fixed
-        z-50
+        
+       
         bottom-4
         left-1/2
         -translate-x-1/2
