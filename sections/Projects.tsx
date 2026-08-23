@@ -1,6 +1,6 @@
 const ProjectSection = () => {
     return (
-        <h1>Project</h1>
+        <h1>Projecthu </h1>
     )
 }
 

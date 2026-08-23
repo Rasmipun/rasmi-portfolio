@@ -1,20 +1,24 @@
+"use client";
+
 import { Home, FolderKanban, Mail, User } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navItems = [
-  { name: "Home", href: "#", icon: Home },
-  { name: "Projects", href: "#projects", icon: FolderKanban },
-  { name: "About", href: "#about", icon: User },
-  { name: "Contact", href: "#contact", icon: Mail },
+  { name: "Home", path: "/", icon: Home },
+  { name: "Projects", path: "/projects", icon: FolderKanban },
+  { name: "About", path: "/about", icon: User },
+  { name: "Contact", path: "/contact", icon: Mail },
 ];
 
 const Navbar = () => {
+  const pathname = usePathname();
+
   return (
     <nav
       className="
         fixed
         z-50
-
-        /* Mobile */
         bottom-4
         left-1/2
         -translate-x-1/2
@@ -28,7 +32,6 @@ const Navbar = () => {
         backdrop-blur-xl
         shadow-lg
 
-        /* Desktop */
         md:top-0
         md:right-0
         md:bottom-auto
@@ -47,54 +50,64 @@ const Navbar = () => {
     >
       {navItems.map((item) => {
         const Icon = item.icon;
+        const isActive = item.path === pathname;
 
         return (
-          <a
+          <Link
             key={item.name}
-            href={item.href}
-            className="
+            href={item.path}
+            className={`
               group
               relative
-              rounded-full
               px-4
               py-1.5
-              text-md
               font-semibold
-              text-white/70
               transition-colors
-              duration-300
+              duration-700
+
+              ${isActive ? "text-primary" : "text-white"}
+
               hover:text-primary
 
               after:absolute
               after:left-4
               after:bottom-0
               after:h-0.5
-              after:w-0
               after:bg-primary
               after:shadow-[0_0_8px_#39FF14]
               after:transition-all
-              after:duration-300
-              hover:after:w-[calc(100%-2rem)]
-            "
+              after:duration-700
+              after:ease-in-out
+
+              ${
+                isActive
+                  ? "after:w-[calc(100%-2rem)]"
+                  : "after:w-0 hover:after:w-[calc(100%-2rem)]"
+              }
+            `}
           >
             {/* Mobile icon */}
             <Icon
               size={20}
-              className="
+              className={`
                 block
-                text-white/70
                 transition-colors
-                duration-300
-                group-hover:text-primary
+                duration-600
                 md:hidden
-              "
+
+                ${
+                  isActive
+                    ? "text-primary"
+                    : "text-white group-hover:text-primary"
+                }
+              `}
             />
 
             {/* Desktop text */}
             <span className="hidden md:block">
               {item.name}
             </span>
-          </a>
+          </Link>
         );
       })}
     </nav>

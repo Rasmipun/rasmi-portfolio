@@ -1,6 +1,6 @@
 const TapeSection = () => {
     return (
-        <h1>Tape</h1>
+        <h1 className="bg-amber-700">Tape</h1>
     )
 }
 

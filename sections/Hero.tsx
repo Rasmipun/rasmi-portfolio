@@ -3,7 +3,7 @@ import AutoTypeTitle from "./../Components/ui/AutoTypeTitle";
 
 const HeroSection = () => {
   return (
-    <section className="md:min-h-162 min-h-181 bg-amber-200">
+    <section className="md:min-h-163  sm:min-h-200 bg-amber-200">
 
       <div className="
         flex
